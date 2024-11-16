@@ -34,7 +34,7 @@ class TestHomePage(TestCase):
 
     def test_only_autor_list(self):
         self.client.force_login(self.other_user)
-        new_note = Note.objects.create(
+        Note.objects.create(
             title='Вторая заметка',
             text='Текст2',
             author=self.other_user,
